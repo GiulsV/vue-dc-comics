@@ -1,6 +1,6 @@
 <template>
   <main>
-    --- CONTENT GOES HERE ---
+    CONTENT GOES HERE
   </main>
 </template>
 
@@ -11,4 +11,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+main{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
 </style>
