@@ -23,13 +23,21 @@ import MainComponent from './components/MainComponent.vue'
 import BlueSection from './components/BlueSection.vue'
 import FooterComponent from './components/FooterComponent.vue'
 
+import products from './assets/data/dc-comics'
+
 export default {
   name: 'App',
+  data(){
+    return{
+      products,
+    }   
+  },
+
   components: {
-      HeaderComponent,
-      MainComponent,
-      BlueSection,
-      FooterComponent,
+    HeaderComponent,
+    MainComponent,
+    BlueSection,
+    FooterComponent,
   }
 }
 </script>
