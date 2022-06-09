@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-    <HeaderComponent/>
-    <MainComponent/>
-    <BlueSection/>
+    
+    <HeaderComponent />
+
+    <main>
+      <div>
+      <MainComponent/>
+      </div>
+      <BlueSection/>
+    </main>
+
+    <footer>
     <FooterComponent/>
+    </footer>
+    
   </div>
 </template>
 
@@ -39,5 +49,12 @@ export default {
   // text-align: center;
   // color: #2c3e50;
   // margin-top: 60px;
+}
+
+.container-footer{
+  margin: auto 10%;
+}
+.container-blue{
+  margin: auto 15%;
 }
 </style>
