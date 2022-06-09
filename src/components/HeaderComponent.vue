@@ -1,42 +1,49 @@
 <template>
   <header>
-    <img src="../assets/img/dc-logo.png" alt="DC logo">
+    <div class="container-blue">
+      <img src="../assets/img/dc-logo.png" alt="DC logo">
       <div id="menu-container">
         <ul>
-          <li><a href="#">characters</a></li>
-          <li><a href="#">comics</a></li>
-          <li><a href="#">movies</a></li>
-          <li><a href="#">tv</a></li>
-          <li><a href="#">games</a></li>
-          <li><a href="#">collectibles</a></li>
-          <li><a href="#">videos</a></li>
-          <li><a href="#">fans</a></li>
-          <li><a href="#">news</a></li>
-          <li><a href="#">shop</a></li>
+          <li v-for="link in menus" :key="link">
+            <a href="#">{{link}}</a>
+          </li>
         </ul>
       </div>
-  </header>
+    </div>
+  </header>  
 </template>
 
 <script>
 export default {
-    name: 'HeaderComponent',
-}
+  name: "HeaderComponent",
+  data() {
+    return {
+      menus: ["characters", "comics", "movies", "tv", "games", "collectibles", "video", "fans", "news", "shop"]
+    };
+  },
+};
 </script>
 
 
 <style lang="scss" scoped>
 
 header{
-  // background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0rem;
+  background-color: white;
+
+  .container-blue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+        
+  }
   
   ul{
-    display: flex;
-    list-style-type: none;
+      display: flex;
+      list-style-type: none;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      column-gap: 0.7rem;
     
     li{
       padding: 0rem 0.8rem;
@@ -47,6 +54,12 @@ header{
       a{
         color: rgb(65, 61, 61);
         text-decoration: none;
+                     
+        &:hover{
+          color: rgb(12 124 236);
+          border-bottom: 5px solid rgb(12 124 236);
+          padding-bottom: 3rem;
+        }
       }
     }
   }
